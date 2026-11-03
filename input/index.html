@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Input Data SPPG</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #f1f5f9; padding: 40px 20px; }
+        .form-card { background: #ffffff; max-width: 550px; margin: 0 auto; padding: 24px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+        h2 { margin-bottom: 20px; color: #0f172a; font-size: 1.3rem; }
+        .form-group { margin-bottom: 14px; }
+        label { display: block; margin-bottom: 5px; font-weight: 600; font-size: 0.85rem; color: #475569; }
+        input[type="text"], textarea { width: 100%; padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.9rem; outline: none; }
+        input[type="text"]:focus, textarea:focus { border-color: #2563eb; }
+        .btn-submit { width: 100%; background: #2563eb; color: white; padding: 10px; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; margin-top: 10px; }
+        .btn-submit:hover { background: #1d4ed8; }
+    </style>
+</head>
+<body>
+
+<div class="form-card">
+    <h2>Form Input Data SPPG</h2>
+    <form action="input.php" method="post">
+        <div class="form-group">
+            <label for="namasppg">Nama SPPG:</label>
+            <input type="text" id="namasppg" name="namasppg" required placeholder="Contoh: SPPG Sleman Prambanan Bokoharjo 1">
+        </div>
+        <div class="form-group">
+            <label for="kapanewon">Kapanewon:</label>
+            <input type="text" id="kapanewon" name="kapanewon" required value="PRAMBANAN">
+        </div>
+        <div class="form-group">
+            <label for="kalurahan">Kalurahan:</label>
+            <input type="text" id="kalurahan" name="kalurahan" required placeholder="Contoh: BOKOHARJO">
+        </div>
+        <div class="form-group">
+            <label for="alamat">Alamat Lengkap:</label>
+            <textarea id="alamat" name="alamat" rows="3" required placeholder="Alamat detail lokasi SPPG"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="longitude">Longitude:</label>
+            <input type="text" id="longitude" name="longitude" required placeholder="Contoh: 110.4860008">
+        </div>
+        <div class="form-group">
+            <label for="latitude">Latitude:</label>
+            <input type="text" id="latitude" name="latitude" required placeholder="Contoh: -7.779331734">
+        </div>
+        
+        <input type="submit" value="Simpan Data" class="btn-submit">
+    </form>
+</div>
+
+</body>
+</html>
